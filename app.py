@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
 # Import your custom functions here
-from your_model_script import load_tables, transform_table, train_test_model
+from src.functions import load_tables, transform_table, train_test_model
 
 st.title("Stock Prediction App")
 st.sidebar.header("User Input")
