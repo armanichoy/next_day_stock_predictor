@@ -34,7 +34,14 @@ if predict_button:
 
         # Display results
         st.write("Prediction Results:")
-        st.text(result)
+        def directions(direction):
+            if direction == 0:
+                return "No Change"
+            elif direction == 1:
+                return "Up"
+            else:
+                return "Down"
+        st.text(directions(model.predict(last_day.drop(['target']).to_frame().T)[0]))
         
         # Display feature importance
         importance_df = pd.DataFrame({
